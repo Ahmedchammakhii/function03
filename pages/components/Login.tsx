@@ -61,7 +61,7 @@ router.push("/Account")
 </div>
 
 </div>
-<div className={"login-header "+styles.mobilelogin} style={{position:"absolute",width:"70vw",display:"flex",pointerEvents:"none",alignItems:"center",color:"#fff",zIndex:50,gap:20,height:"100vh"}}>
+<div className={"login-header "+styles.mobilelogin} style={{position:"absolute",width:"70vw",display:"flex",pointerEvents:"none",alignItems:"center",color:"#fff",zIndex:50,gap:20,height:"100svh"}}>
   <div className={"metamask_header " + styles.fade}>
   <h1>Connect with MetaMask</h1>
   <p style={{width:"40%"}}>Experience seamless interaction with the Ethereum network by connecting your MetaMask wallet.</p>
@@ -69,7 +69,7 @@ router.push("/Account")
 <li>Connect to your account via metamask</li>
 <li>Do a transaction</li>
 </div></div>
-<div className={"loginin_btn " +styles.fade} onClick={auth} style={{ cursor:"pointer",pointerEvents:"fill",transition:"cubic-bezier(0.895, 0.03, 0.685, 0.22) all 1s",width:"15vw",height:"10vh",borderRadius:"3rem 1rem",background:"#fff",display:"flex",justifyContent:"center",alignItems:"center",color:"#000"}}>
+<div className={"loginin_btn " +styles.fade} onClick={auth} style={{ cursor:"pointer",pointerEvents:"fill",transition:"cubic-bezier(0.895, 0.03, 0.685, 0.22) all 1s",width:"15vw",height:"10svh",borderRadius:"3rem 1rem",background:"#fff",display:"flex",justifyContent:"center",alignItems:"center",color:"#000"}}>
 {!error ? <p>Log In</p> : <p>{error}</p>}
 </div>
 </div>
