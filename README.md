@@ -1,4 +1,6 @@
 This is a web3 app using wagmi , nextjs combined with typescript
+![Screenshot(iPhone XR)](https://github.com/Ahmedchammakhii/function03/assets/117437634/c42ebe05-4f96-4fa8-a1d8-cc49bdf17030)
+![Screenshot](https://github.com/Ahmedchammakhii/function03/assets/117437634/07b41d98-5179-4013-9f51-1e0f70516339)
 
 ## Getting Started
 
