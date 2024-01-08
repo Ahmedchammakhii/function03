@@ -9,7 +9,7 @@ export default function Header() {
           <p style={{fontWeight:"500"}}>Your gateway to seamless Ethereum interactions using Next.js and TypeScript.</p>
           <div className="function03_description" style={{display:"flex",gap:30,fontWeight:"200",marginTop:10}}>
         <p className={styles.circle}>Who are we ?</p>
-        <p >We are Web3 data enthusiasts.</p>
+        <p >We are Web3 data enthusiasts. <span><img src='https://cryptologos.cc/logos/ethereum-eth-logo.png' style={{objectFit:"contain",width:"3%",height:"3%",position:"absolute"}}/></span></p>
         </div>
           </div>  
         

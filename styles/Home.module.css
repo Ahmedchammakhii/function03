@@ -3,16 +3,6 @@
 margin-left: 15px;
 
 }
-.circle::before{
-position: absolute;
-content: "";
-width: 8px;
-height: 8px;
-top:30%;
-left: -15%;
-border-radius: 50%;
-border: 1px solid #000;
-}
 .login {
   position: absolute;
   bottom: 0;
