@@ -1,7 +1,7 @@
 
 import { useCallback, useState } from 'react';
 import styles from '../../styles/Home.module.css'
-import {useAccount} from "./useAccount"
+import {useAccount} from "../../hooks/useAccount"
 import { useRouter } from 'next/navigation';
 const Login = () => {
   const router = useRouter()
