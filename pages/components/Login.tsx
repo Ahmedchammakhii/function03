@@ -36,8 +36,7 @@ const Login = () => {
             const btnElement = document.querySelector<HTMLDivElement>('.loginin_btn');
  if (btnElement) {btnElement.classList.toggle(styles.error)}
             setError("MetaMask not installed !");
-            updateAccount("null")
-router.push("/Account")
+        
           }
        else {
          
@@ -46,6 +45,7 @@ router.push("/Account")
                 method: "eth_requestAccounts",
               });
               updateAccount(account[0]);
+              router.push("/Account")
             } catch (err:any) {
               setError((err).message);
             }
