@@ -4,6 +4,9 @@ import styles from '../../styles/Home.module.css'
 import {useAccount} from "./useAccount"
 import { useRouter } from 'next/navigation';
 const Login = () => {
+  interface WindowWithEthereum {
+    ethereum?: any;
+  }
   const router = useRouter()
     const onclick =useCallback(()=>{
         const loginElement = document.querySelector<HTMLDivElement>('#login');
@@ -31,7 +34,7 @@ const Login = () => {
         const [error, setError] = useState("");
       
       const auth = async ()=>{
-        const { ethereum } = typeof window !== "undefined" ? window : {};
+        const { ethereum } = typeof window !== "undefined" ? window : {} as WindowWithEthereum ;
           if (!ethereum) {
             const btnElement = document.querySelector<HTMLDivElement>('.loginin_btn');
  if (btnElement) {btnElement.classList.toggle(styles.error)}
