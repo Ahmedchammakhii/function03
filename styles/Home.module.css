@@ -84,4 +84,19 @@ border-radius: calc(10rem + 5vw);
   ; right: 20px;
   cursor: pointer;
 }
+.error {
+  animation: err 1s;
+}
+@keyframes err {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
 
+  }
+  100%{
+    transform: translateY(0px);
+
+  }
+}
