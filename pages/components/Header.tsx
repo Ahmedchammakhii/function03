@@ -2,7 +2,7 @@ import styles from '../../styles/Home.module.css'
 
 export default function Header() {
     return (
-        <header id='header' style={{  transition:"cubic-bezier(0.895, 0.03, 0.685, 0.22) all 1s" ,width:"80vw",display:"flex",justifyContent:"center"}}>
+        <header id='header' style={{  transition:"cubic-bezier(0.895, 0.03, 0.685, 0.22) all 1s" ,width:"80vw",display:"flex",justifyContent:"center",height:"45vh"}}>
         <div className="main_text" style={{width:"80%",display:"flex",flexDirection:"column",alignItems:"flex-end"}} >
         <div>
         <h1 style={{fontWeight:"200"}}>Ethereum Wallet Explorer 🚀</h1>
