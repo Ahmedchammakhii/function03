@@ -3,6 +3,9 @@ import  { createContext, useContext, useState, ReactNode } from 'react';
 
 interface MyContextProps {
     account: string;
+    token: string;
+    updateToken: (newValue: string) => void;
+
   updateAccount: (newValue: string) => void;
 }
 
@@ -14,13 +17,17 @@ interface MyProviderProps {
 
 export const MyProvider: React.FC<MyProviderProps> = ({ children }) => {
     const [account, setAccount] = useState("");
+    const [token, setToken] = useState("");
 
   const updateAccount = (newValue: string) => {
     setAccount(newValue);
   };
+  const updateToken = (newValue: string) => {
+    setToken(newValue);
+  };
 
   return (
-    <MyContext.Provider value={{ account, updateAccount }}>
+    <MyContext.Provider value={{ account, updateAccount , token , updateToken}}>
       {children}
     </MyContext.Provider>
   );
