@@ -4,8 +4,9 @@ import  { createContext, useContext, useState, ReactNode } from 'react';
 interface MyContextProps {
     account: string;
     token: string;
+    transaction:any;
     updateToken: (newValue: string) => void;
-
+    updateTransaction: (newValue: object) => void;
   updateAccount: (newValue: string) => void;
 }
 
@@ -18,16 +19,20 @@ interface MyProviderProps {
 export const MyProvider: React.FC<MyProviderProps> = ({ children }) => {
     const [account, setAccount] = useState("");
     const [token, setToken] = useState("");
+    const [transaction, setTr] = useState<{ qu: string; adrc: string; adrRec: string }>({ qu: "", adrc: "", adrRec: "" });
 
   const updateAccount = (newValue: string) => {
     setAccount(newValue);
+  };
+  const updateTransaction= (newValue: any) => {
+    setTr(newValue);
   };
   const updateToken = (newValue: string) => {
     setToken(newValue);
   };
 
   return (
-    <MyContext.Provider value={{ account, updateAccount , token , updateToken}}>
+    <MyContext.Provider value={{transaction ,updateTransaction, account, updateAccount , token , updateToken}}>
       {children}
     </MyContext.Provider>
   );

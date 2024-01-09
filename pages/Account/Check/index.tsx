@@ -38,8 +38,8 @@ const index = () => {
         </div>
 
         <div>
-            <h2>Token Address:</h2>
-            <p>{result.data?.address}</p>
+            <h2>Token Symbol:</h2>
+            <p>{result.data?.symbol}</p>
         </div>
 
         <div>

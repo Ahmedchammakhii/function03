@@ -6,8 +6,14 @@ import { useToken } from 'wagmi'
 
 const YourWallet = () => {
 const [adr,setadr]=useState("")
-const { account, updateAccount , updateToken ,token} = useAccount();
+const [adrRec,setadrRec]=useState("")
+const [qu,setq]=useState("")
+const [adrc,setadrc]=useState("")
+
+
+const {updateTransaction , account, updateAccount , updateToken ,token} = useAccount();
 const [show,setshow]=useState(false)
+const [showTr,setshowTr]=useState(false)
 
 const router = useRouter()
 const result = useToken({
@@ -29,10 +35,12 @@ const result = useToken({
      <h1 style={{color:"#6a7b9a",fontWeight:300}}>{
         result.data? result.data.totalSupply.value.toString() : '0 ETH'
 }</h1>
+<h1 style={{color:"#6a7b9a",fontWeight:300}}>BALANCE </h1>
+
      </div>
      <div className='wallet' onClick={e=>setshow(true)} style={{height:"60%",width:"22%",cursor:"pointer",background:"#b5e9d0",borderRadius:"2rem",display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",gap:20}}> <img src="https://www.pngkey.com/png/full/264-2645391_ethereum-white-logo.png" style={{width:"70%",height:"40%",objectFit:"contain",}} />
      <h1 style={{color:"#6a7b9a",fontWeight:300}} >Check an adress</h1>
-     </div> <div className='wallet' style={{height:"60%",width:"22%",cursor:"pointer",background:"#7564f2",borderRadius:"2rem",display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",gap:20}}> <img src="https://static.vecteezy.com/system/resources/thumbnails/024/063/335/small/transaction-payment-history-png.png" style={{width:"70%",height:"40%",objectFit:"contain",}} />
+     </div> <div onClick={e=>setshowTr(true)} className='wallet' style={{height:"60%",width:"22%",cursor:"pointer",background:"#7564f2",borderRadius:"2rem",display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",gap:20}}> <img src="https://static.vecteezy.com/system/resources/thumbnails/024/063/335/small/transaction-payment-history-png.png" style={{width:"70%",height:"40%",objectFit:"contain",}} />
      <h1 style={{color:"#fff",fontWeight:300}}>Do a transiction</h1>
      </div>
     </div>
@@ -66,6 +74,18 @@ const result = useToken({
     }} type="text" placeholder="Enter ERPC-20" style={{width:"50%",background:"#c2dacf",padding:"10px",color:"#72a891",border:0  }} />
     <button onClick={e=>{updateToken(adr) ; router.push("/Account/Check")}} style={{cursor:"pointer",width:"30%",background:"#6a7b9a",padding:"20px",color:"#fff",border:0 , borderRadius:"2rem"}} >Search</button>
     <p style={{position:"absolute",top:20,left:50,cursor:"pointer"}} onClick={e=>setshow(false)}>BACK</p>
+    </div> 
+)}
+{showTr && (  <div style={{position:"absolute",top:0,zIndex:2000,width:"90vw",height:"100vh",background:"rgba(222, 235, 229, .9)",display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",gap:20}}>
+<input onChange={e=>{setadrRec(e.target.value);
+    }} type="text" placeholder="Enter RECEPIENT ADRESS" style={{width:"50%",background:"#c2dacf",padding:"10px",color:"#72a891",border:0  }} />
+    <input onChange={e=>{setadrc(e.target.value);
+    }} type="text" placeholder="Enter CONTRACT ADRESS" style={{width:"50%",background:"#c2dacf",padding:"10px",color:"#72a891",border:0  }} />
+
+    <input onChange={e=>{setq(e.target.value);
+    }} type="text" placeholder="Enter QUANTITY" style={{width:"50%",background:"#c2dacf",padding:"10px",color:"#72a891",border:0  }} />
+    <button onClick={e=>{updateTransaction({qu,adrc,adrRec}) ; router.push("/Account/Transaction")}} style={{cursor:"pointer",width:"30%",background:"#6a7b9a",padding:"20px",color:"#fff",border:0 , borderRadius:"2rem"}} >TRANSFER</button>
+    <p style={{position:"absolute",top:20,left:50,cursor:"pointer"}} onClick={e=>setshowTr(false)}>BACK</p>
     </div> 
 )}
     </div>
