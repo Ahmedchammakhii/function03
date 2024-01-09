@@ -41,7 +41,7 @@ const result = useToken({
      <div className='wallet' onClick={e=>setshow(true)} style={{height:"60%",width:"22%",cursor:"pointer",background:"#b5e9d0",borderRadius:"2rem",display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",gap:20}}> <img src="https://www.pngkey.com/png/full/264-2645391_ethereum-white-logo.png" style={{width:"70%",height:"40%",objectFit:"contain",}} />
      <h1 style={{color:"#6a7b9a",fontWeight:300}} >Check an adress</h1>
      </div> <div onClick={e=>setshowTr(true)} className='wallet' style={{height:"60%",width:"22%",cursor:"pointer",background:"#7564f2",borderRadius:"2rem",display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",gap:20}}> <img src="https://static.vecteezy.com/system/resources/thumbnails/024/063/335/small/transaction-payment-history-png.png" style={{width:"70%",height:"40%",objectFit:"contain",}} />
-     <h1 style={{color:"#fff",fontWeight:300}}>Do a transiction</h1>
+     <h1 style={{color:"#fff",fontWeight:300}}>Do a transaction</h1>
      </div>
     </div>
  
